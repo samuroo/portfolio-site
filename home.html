@@ -10,6 +10,7 @@
 
 <body>
     <div class="main-container">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
         <nav class="nav-bar">
             <div class="logo-container">
                 <img src="res/logo.gif" class="logo">
@@ -51,5 +52,13 @@
             </div>
         </main>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('active');
+        }
+    </script>
+    
 </body>
 </html>
