@@ -10,11 +10,16 @@
     height: 100%;
 }
 
+.menu-button {
+    display: none; /* Hidden for larger screens */
+}
+
 .nav-bar {
     display: flex;
     position: fixed;
     flex-direction: column;
     align-items: center;
+
     width: 15%;
     height: 100vh;
     /* background-color: #888; */
@@ -29,12 +34,14 @@
 .nav-bar ul li {
     padding-bottom: 30%;
     list-style-type: none;
+    /* text-align: center; */
 }
 .nav-bar ul li a {
     color: #080808;
-    font-size: clamp(0.5rem, 2.5vw, 1.25rem);
+    font-size: clamp(0.3rem, 2vw, 1.25rem);
     text-decoration: none;
     position: relative;
+    /* text-align: center; */
 }
 nav ul li a::after{
     content: '';
@@ -67,4 +74,64 @@ nav ul li a:hover:after{
 .closeup{
     width: 100%;
     margin-bottom: 5%;
+}
+
+/* phone screens */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Hidden off-screen */
+        width: 30%; /* Adjust width as needed */
+        height: 100vh;
+        background-color: #f4f4f4;
+        flex-direction: column;
+        transition: left 0.3s ease;
+    }
+    .logo-container {
+        margin:20%;
+        margin-top: 40%;
+        /* background-color: aqua; */
+    }
+    .logo {
+        width: 100%;
+    }
+
+    .nav-bar ul li a {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    .nav-bar.active {
+        left: 0;
+    }
+
+    .menu-button {
+        position: fixed;
+        /* top: 15px;
+        left: 15px; */
+        margin-left: 3%;
+        margin-top: 3%;
+        width: 40px;
+        height: 40px;
+        background: #080808;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        z-index: 1100;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .menu-button.open {
+        left: 75%; 
+    }
+
+    .main-content-container {
+        width: 100%; 
+        margin-left: 0;
+    }
+
+    
 }
