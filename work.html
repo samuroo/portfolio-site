@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="res/favicon.ico">
+  <link rel="stylesheet" href="css/work.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="nav-bar">
+            <div class="logo-container">
+                <img src="res/logo.png" class="logo">
+            </div>
+
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="research.html">RESEARCH</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="navtxt-container">
+                <p>
+                    all content as seen was devloped 
+                    by <span class="bold"> Sam Leveau </span>
+                </p>
+            </div>
+        </nav>
+
+        <main class="main-content-container">
+            <p>Work Main Content</p>
+            <div class = "boxed-work-container">
+                <h2>ARM TEAM</h2>
+            </div>
+            <div class = "boxed-work-container">
+                <h1>SAND ART</h1>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
