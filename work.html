@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <div class="main-container">
         <button class="menu-button" onclick="toggleMenu()">☰</button>
         <nav class="nav-bar">
@@ -21,25 +22,50 @@
                 <li><a href="home.html">HOME</a></li>
                 <li><a href="work.html">WORK</a></li>
                 <li><a href="research.html">RESEARCH</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="CV.html">CV</a></li>
             </ul>
 
             <div class="navtxt-container">
                 <p>
                     all content as seen was devloped 
-                    by <span class="bold"> Sam Leveau </span>
+                    by <span class="bold"> Sam Leveau </span>&copy;
                 </p>
             </div>
         </nav>
 
         <main class="main-content-container">
-            <p>Work Main Content</p>
-            <div class = "boxed-work-container">
-                <h2>ARM TEAM</h2>
+            <p class="main-font">
+                Below you will find different projects that I have
+                completed and/or still working on. If you have any
+                contact me via the home page!
+            </p>
+            <div id="grid-layout-container">
+                
+                <div class="boxed-work">
+                    <img src="res/ARM_main.png" class="boxed-img">
+                    <br>
+                    <p class="boxed-header">ARM Team</p>
+                </div>
+
+                <div class="boxed-work">
+                    <img src="res/SPLIT_main.png" class="boxed-img">
+                    <br>
+                    <p class="boxed-header">Split Flap Display</p>
+                </div>
+
+                <div class="boxed-work">
+                    <img src="res/SAND_main.png" class="boxed-img">
+                    <br>
+                    <p class="boxed-header">Sand Art</p>
+                </div>
+
+                <div class="boxed-work">
+                    <!-- <img src="res/ARM_main.png" class="boxed-img"> -->
+                    <br>
+                    <p class="boxed-header">Misc</p>
+                </div>
             </div>
-            <div class = "boxed-work-container">
-                <h1>SAND ART</h1>
-            </div>
+            
         </main>
     </div>
 
@@ -48,6 +74,7 @@
             const navBar = document.querySelector('.nav-bar');
             navBar.classList.toggle('active');
         }
+
     </script>
 
 </body>

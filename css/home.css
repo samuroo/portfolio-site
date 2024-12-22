@@ -10,6 +10,7 @@
     height: 100%;
 }
 
+
 .menu-button {
     display: none; /* Hidden for larger screens */
 }
@@ -80,7 +81,22 @@ nav ul li a:hover:after{
 .home-content{
     margin: 5%;
     line-height: 1.6;
+    align-items: center;
 }
+
+.main-font{
+    font-size: 135%;
+    padding: 3%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+}
+
+.home-content a {
+    text-decoration: none;
+    color: #080808;
+}
+
 .closeup{
     width: 100%;
     margin-bottom: 5%;

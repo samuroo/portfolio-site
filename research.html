@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="res/favicon.ico">
+  <link rel="stylesheet" href="css/research.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="nav-bar">
+            <div class="logo-container">
+                <img src="res/logo.png" class="logo">
+            </div>
+
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="research.html">RESEARCH</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+
+            <div class="navtxt-container">
+                <p>
+                    all content as seen was devloped by <b>Sam Leveau</b>&copy;
+                </p>
+            </div>
+        </nav>
+
+        <main class="main-content-container">
+            <p class="main-font">
+                As a member of the Robotics and Control Lab, my research 
+                focuses on advancing robotics with an emphasis on 
+                real-world applications in agriculture. One of our key
+                 projects is enhancing the capabilities of the <i>Amiga</i> 
+                 tractor, an autonomous electric tractor developed by 
+                 <i><a href="https://farm-ng.com">Farm_NG</a></i>. 
+                 Designed to support organic farming, 
+                 the <i>Amiga</i> enables low-till weeding practices that reduce
+                  the reliance on harmful pesticides and herbicides, 
+                  promoting sustainable farming methods.
+            </p>
+
+            <div id="grid-layout-container">
+                <div class="boxed-image">
+                    <p>ah</p>
+                    <!-- <img src="res/ARM_main.png" class="boxed-img"> -->
+                </div>
+                <div class="boxed-text">
+                    <p>Hello test</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('active');
+        }
+    </script>
+    
+
+</body>
+</html>
