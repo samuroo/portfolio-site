@@ -26,14 +26,14 @@
 
             <div class="navtxt-container">
                 <p>
-                    all content as seen was devloped by <b>Sam Leveau</b>&copy;
+                    all content as seen was devloped by <b>Sam Leveau</b> &copy;
                 </p>
             </div>
         </nav>
 
         <main class="main-content-container">
             <p class="main-font">
-                As a member of the Robotics and Control Lab, my research 
+                &nbsp;&nbsp;As a member of the Robotics and Control Lab, my research 
                 focuses on advancing robotics with an emphasis on 
                 real-world applications in agriculture. One of our key
                  projects is enhancing the capabilities of the <i>Amiga</i> 
@@ -41,28 +41,89 @@
                  <i><a href="https://farm-ng.com">Farm_NG</a></i>. 
                  Designed to support organic farming, 
                  the <i>Amiga</i> enables low-till weeding practices that reduce
-                  the reliance on harmful pesticides and herbicides, 
-                  promoting sustainable farming methods.
+                  the reliance on harmful pesticides and herbicides.
             </p>
 
+            <h2>PROBLEM / SOLUTION</h2>
             <div id="grid-layout-container">
                 <div class="boxed-image">
-                    <p>ah</p>
-                    <!-- <img src="res/ARM_main.png" class="boxed-img"> -->
+                    <img src="res/Tractor.png" class="boxed-img">
+                    <p>The <i>Amiga</i></p>
                 </div>
-                <div class="boxed-text">
-                    <p>Hello test</p>
+                <div class="boxed-text" id="right">
+                    <p>
+                        While testing the autonomous tram line navigation, the
+                         Amiga occasionally strayed from its path, requiring an emergency
+                        stop and manual re-adjustment. Currently, the tractor’s 
+                        control systems require close physical proximity
+                        to manage these essential functions.
+                    </p>
+                    <br>
+                    <p>
+                        To address the proximity issue of tractor control, 
+                        the solution our lab came to focuses on developing a
+                        mobile application that enables remote control 
+                        via a virtual joystick, live video streaming, an emergency
+                        stop button, reverse replay functionality,
+                         and pause/play of autonomous operations.
+                    </p>
                 </div>
-
             </div>
+            
+            <h2>MOBILE APPLICATION</h2>
+            <div id="grid-layout-container">
+                <div class="boxed-text" id="left">
+                    <p>
+                        The application is developed using Python 
+                        and the Kivy framework, enabling cross-platform 
+                        integration. Buildozer, a Python tool, is 
+                        used to package the app for deployment on Android or iOS.
+                    </p>
+                    <br>
+                    <p>
+                        The current iteration, as shown in the figures, 
+                        consists of the IP screen and the JoyStick tab. To 
+                        utilize the mobile application, the user must 
+                        first enable the <i>Amiga</i> server application 
+                        (on the <i>Amiga</i>). Then should enter <i>Amiga's</i>
+                         IP address and port into the app and select <i>LOAD</i>. 
+                         Once successfully connected, in the JoyStick tab, 
+                         the user can view a live video stream and control the movement.
+                    </p>
+                </div>
+                <div class="boxed-image">
+                    <img src="res/AppSS.png" class="boxed-img">
+                    <p>Screenshots of current mobile application</p>
+                </div>
+            </div>
+
+            <h2>NETWORK</h2>
+            <div id="grid-layout-container">
+                <div class="boxed-image">
+                    <img src="res/BlockDia.jpg" class="boxed-img">
+                    <p>Block Diagram</p>
+                </div>
+                <div class="boxed-text" id="right">
+                    <p>
+                        To communicate between the <i>Amiga</i> and mobile devices, 
+                        we decided to uitlize the User Datagram Protocol (UDP) to create
+                         server-client connection. This requires the <i>Amiga</i> and
+                          device to be on the same network (typically hotspot or WiFi).
+                    </p>
+                </div>
+            </div>
+
+        
         </main>
     </div>
+
 
     <script>
         function toggleMenu() {
             const navBar = document.querySelector('.nav-bar');
             navBar.classList.toggle('active');
         }
+
     </script>
     
 
