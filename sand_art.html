@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="res/favicon.ico">
+  <link rel="stylesheet" href="css/sand_art.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="nav-bar">
+            <div class="logo-container">
+                <img src="res/logo.png" class="logo">
+            </div>
+
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="research.html">RESEARCH</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+
+            <div class="navtxt-container">
+                <p>
+                    all content as seen was devloped by <b>Sam Leveau</b> &copy;
+                </p>
+            </div>
+        </nav>
+
+        <main class="main-content-container">
+            <p class="main-font">
+                &nbsp;&nbsp;In this project I was invited by <i>Fruitcake</i>, a 
+                University of California Santa Cruz (UCSC) art club, to create a piece 
+                of art for a one day gallery. My love for guitar and visual art gave me 
+                inpiration for my submission: 
+            </p>
+
+            <h2>Constuction</h2>
+            <div id="grid-layout-container">
+                <div class="boxed-image">
+                    <img src="res/" class="boxed-img">
+                    <p>"Wave Finder"</p>
+                </div>
+                <div class="boxed-text" id="right">
+                    <p>
+                        Components included a six inch <i>8 OHM</i> speaker taken from 
+                        a small speaker cabniet found in a dumpster, quarter inch aryrlic,
+                        a mono guitar output jack, 16th inch alumnium plate and some 
+                        loose hardware found in my house.
+                        Of course, sand was found at the beach and sifted for a finer powder.
+                    </p>
+                    <br>
+                    <p>
+                        At the showing, I would pluck a single guitar note. amp with extra output in back. 
+                    </p>
+                </div>
+            </div>
+           
+
+        
+        </main>
+    </div>
+
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('active');
+        }
+
+    </script>
+    
+
+</body>
+</html>

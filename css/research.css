@@ -81,6 +81,10 @@ nav ul li a:hover:after{
 .main-content-container h2{
     padding-top: 5%;
 }
+.thesis-frame {
+  margin-top: 5vh; /* 5% of the viewport height */
+}
+
 
 .home-content{
     margin: 5%;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="res/favicon.ico">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="nav-bar">
+            <div class="logo-container">
+                <img src="res/logo.png" class="logo">
+            </div>
+
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="research.html">RESEARCH</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+
+            <div class="navtxt-container">
+                <p>
+                    all content as seen was devloped by <b>Sam Leveau</b> &copy;
+                </p>
+            </div>
+        </nav>
+
+        <main class="main-content-container">
+            <!-- <div class="home-content"> -->
+            <iframe class="cv-frame" src="res/CurriculumVitae_Sam Leveau(rev7.1).pdf" width="85%" style="height: 100vh;">
+                <p>Your browser does not support PDFs. <a href="res/CurriculumVitae_Sam Leveau(rev7.1).pdf" target="_blank">Download the PDF</a>.</p>
+            </iframe>
+
+            <!-- </div> -->
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('active');
+        }
+    </script>
+    
+
+</body>
+</html>

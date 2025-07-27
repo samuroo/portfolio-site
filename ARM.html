@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="res/favicon.ico">
+  <link rel="stylesheet" href="css/ARM.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="nav-bar">
+            <div class="logo-container">
+                <img src="res/logo.png" class="logo">
+            </div>
+
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="research.html">RESEARCH</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+
+            <div class="navtxt-container">
+                <p>
+                    all content as seen was developed by <b>Sam Leveau</b> &copy;
+                </p>
+            </div>
+        </nav>
+
+        <main class="main-content-container">
+            <p class="main-font">
+                &nbsp;&nbsp;ARM Team, a sub-team within the UC Santa Cruz club
+                <i>Slugbotics</i>, is a research-based project aimed at developing a low-cost, open-source, modular robotic arm. 
+                As a co-lead of the team, I helped guide both the technical and organizational direction. 
+                This strengthened my leadership skills and introduced me to team management practices such as maintaining a 
+                shared Bill of Materials (BOM) and creating a Notion workspace to streamline communication, 
+                task assignments, and documentation among team members.
+            </p>
+
+            <h2>MECHANICAL</h2>
+            <div id="grid-layout-container">
+                <div class="boxed-image">
+                    <img src="res/arm_onshape.png" class="boxed-img">
+                    <p>CAD Depiction of the ARM</p>
+                </div>
+                <div class="boxed-text" id="right">
+                    <p>
+                        I helped create create a 3D CAD models using Onshape. The arm was designed to be modular and customizable, 
+                        allowing for easy iterations. We created components using both Prusa printers and Bamboo Lab X1 Carbons.
+                    </p>
+                </div>
+            </div>
+
+            <h2>KINEMATICS</h2>
+            <div id="grid-layout-container">
+                <div class="boxed-text" id="left">
+                    <p>
+                        I implemented forward and inverse kinematics in MATLAB using the Denavit-Hartenberg (DH) convention. 
+                        This allowed us to compute the exact positions of the end effector based on joint angles and link lengths.
+                    </p>
+                    <br>
+                    <p>
+                        These calculations served as the foundation for simulation, trajectory planning, and closed-loop control. 
+                        This step was essential for validating workspace and reachability.
+                    </p>
+                </div>
+                <div class="boxed-image">
+                    <img src="res/matlab_kinematics.png" class="boxed-img">
+                    <p>MATLAB Kinematics</p>
+                </div>
+            </div>
+
+            <h2>PID</h2>
+            <div id="grid-layout-container">
+                <div class="boxed-image">
+                    <img src="res/ball_following.png" class="boxed-img">
+                    <p>PID Ball Following in CoppeliaSim</p>
+                </div>
+                <div class="boxed-text" id="right">
+                    <p>
+                        Using the onboard Raspberry Pi (as its brain), I implemented a ball-following 
+                        algorithm to detect colored objects in real time. The system processed video 
+                        frames to extract the position of a target color blob and adjusted movement 
+                        accordingly using a proportional-integral (PI) controller.
+                    </p>
+                    <p>
+                        This algorithm was designed as a precursor to object approach and pickup behavior, 
+                        potentially enabling the robot arm to autonomously locate and interact with specific items.
+                    </p>
+                </div>
+            </div>
+
+            <h2>OPENSAUCE</h2>
+            <div id="grid-layout-container">
+                <div class="boxed-text" id="left">
+                    <p>
+                        Our team had the opportunity to demonstrate the ARM project at OpenSauce 2023
+                         in San Francisco, an event that celebrates maker culture, robotics, and open-source innovation.
+                    </p>
+                    <br>
+                    <p>
+                        We showcased the mechanical design, control system demos, and the modular 
+                        architecture to a large audience. It demsonrated that collaborative open-source development is 
+                        critical to moving the world towards a better place.
+                    </p>
+                </div>
+                <div class="boxed-image">
+                    <img src="res/opensauce.png" class="boxed-img">
+                    <p>OpenSauce 2023 Convention</p>
+                </div>
+            </div>
+
+            <h2>DEMO</h2>
+            <p class="main-font">The ARM in demonstration at OpenSauce (color following):</p>
+            <video controls width="80%" class="project-video" >
+                <source src="res/demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
