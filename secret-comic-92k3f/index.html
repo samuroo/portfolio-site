@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="robots" content="noindex, nofollow" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="referrer" content="no-referrer" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Flip-Book&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- (Optional) reuse your site CSS if you want matching styles --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- &lt;link rel="stylesheet" href="../css/site.css"&gt; --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>html, body { margin:0; height:100%; background:#0f1115; color:#eaeef5; font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap { display:grid; grid-template-rows:auto 1fr auto; height:100%; max-width:1200px; margin:0 auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header, footer { display:flex; align-items:center; gap:.5rem; padding:.75rem 1rem; background:rgba(255,255,255,.04); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.viewer { display:grid; place-items:center; margin:.75rem; border-radius:12px; overflow:hidden; background:radial-gradient(1200px 50% at 50% 20%, rgba(255,255,255,.06), transparent 60%); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>img.page { max-width:100%; max-height:100%; width:min(100%, 1000px); height:auto; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.35); transition:transform .18s ease; user-select:none; -webkit-user-drag:none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button { border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:inherit; padding:.45rem .7rem; border-radius:.6rem; cursor:pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.counter { opacity:.7; font-variant-numeric:tabular-nums; margin-left:.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.thumbs { display:grid; grid-auto-flow:column; gap:.4rem; overflow-x:auto; padding:.5rem .75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.thumb { width:70px; height:100px; object-fit:cover; border-radius:6px; opacity:.6; border:2px solid transparent; cursor:pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.thumb.active { opacity:1; border-color:#6ea8fe; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="prev"&gt;◀ Prev&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="next"&gt;Next ▶&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="counter" id="counter"&gt;1 / 1&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="margin-left:auto"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="fs"&gt;⤢ Fullscreen&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="viewer" id="viewer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;img id="page" class="page" alt="Page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="thumbs" id="thumbs"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// List your images (relative to this file)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const PAGES = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"images/page01.jpg",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"images/page02.jpg",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"images/page03.jpg"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let i = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const img = document.getElementById('page');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const ctr = document.getElementById('counter');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const thumbs = document.getElementById('thumbs');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function clamp(x){ return Math.max(0, Math.min(PAGES.length-1, x)); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function set(iNew){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>i = clamp(iNew);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>img.src = PAGES[i];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ctr.textContent = (i+1) + " / " + PAGES.length;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>[...thumbs.children].forEach((t, k)=&gt;t.classList.toggle('active', k===i));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// preload neighbors</p>
+<p class="p1"><span class="Apple-converted-space">      </span>[i-1,i+1].forEach(j=&gt;{ if(j&gt;=0 &amp;&amp; j&lt;PAGES.length){ const p=new Image(); p.src=PAGES[j]; }});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('prev').onclick = ()=&gt; set(i-1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('next').onclick = ()=&gt; set(i+1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('fs').onclick = ()=&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>else document.exitFullscreen?.();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// thumbs</p>
+<p class="p1"><span class="Apple-converted-space">    </span>PAGES.forEach((src, k)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const t=document.createElement('img');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>t.src=src; t.className='thumb'+(k===0?' active':''); t.alt='Page '+(k+1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>t.onclick=()=&gt; set(k);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>thumbs.appendChild(t);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// keys + swipe</p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.addEventListener('keydown', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(e.key==='ArrowRight') set(i+1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(e.key==='ArrowLeft')<span class="Apple-converted-space">  </span>set(i-1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let startX=null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('viewer').addEventListener('touchstart',e=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(e.touches?.length) startX=e.touches[0].clientX;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, {passive:true});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('viewer').addEventListener('touchend',e=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(startX===null) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const endX=e.changedTouches?.[0]?.clientX ?? startX;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const dx=endX-startX;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(dx&lt;-40) set(i+1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(dx&gt; 40) set(i-1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>startX=null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, {passive:true});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>set(0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
