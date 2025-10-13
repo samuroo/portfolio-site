@@ -4,22 +4,46 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Test Embed Page</title>
+  <title>Embed Test</title>
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      background: #0f1115;
-      color: #eaeef5;
+      height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      background: #111827;
+      color: white;
       font-family: system-ui, sans-serif;
       font-size: 2rem;
+      text-align: center;
     }
+    button {
+      background: #2563eb;
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 0.6rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #1e40af; }
   </style>
 </head>
 <body>
-  ✅ <strong>Hello!</strong> This test page loaded successfully.
+  <div>
+    <p id="message">👋 Hello from the embedded page!</p>
+    <button id="btn">Change color</button>
+  </div>
+
+  <script>
+    const colors = ["#f87171", "#34d399", "#60a5fa", "#fbbf24", "#a78bfa"];
+    const msg = document.getElementById("message");
+    const btn = document.getElementById("btn");
+    btn.addEventListener("click", () => {
+      msg.style.color = colors[Math.floor(Math.random() * colors.length)];
+    });
+  </script>
 </body>
 </html>
