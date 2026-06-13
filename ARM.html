@@ -1,134 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SL Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="res/favicon.ico">
-  <link rel="stylesheet" href="css/ARM.css">
+  <meta name="description" content="Open-source modular robotic arm project led by Sam Leveau.">
+  <title>ARM Team | Sam Leveau</title>
+  <link rel="icon" href="res/site/favicon.ico">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/project.css">
 </head>
-
 <body>
-    <div class="main-container">
-        <button class="menu-button" onclick="toggleMenu()">☰</button>
-        <nav class="nav-bar">
-            <div class="logo-container">
-                <img src="res/logo.png" class="logo">
-            </div>
-
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="work.html">WORK</a></li>
-                <li><a href="research.html">RESEARCH</a></li>
-                <li><a href="CV.html">CV</a></li>
-            </ul>
-
-            <div class="navtxt-container">
-                <p>
-                    all content as seen was developed by <b>Sam Leveau</b> &copy;
-                </p>
-            </div>
-        </nav>
-
-        <main class="main-content-container">
-            <p class="main-font">
-                &nbsp;&nbsp;ARM Team, a sub-team within the UC Santa Cruz club
-                <i>Slugbotics</i>, is a research-based project aimed at developing a low-cost, open-source, modular robotic arm. 
-                As a co-lead of the team, I helped guide both the technical and organizational direction. 
-                This strengthened my leadership skills and introduced me to team management practices such as maintaining a 
-                shared Bill of Materials (BOM) and creating a Notion workspace to streamline communication, 
-                task assignments, and documentation among team members.
-            </p>
-
-            <h2>MECHANICAL</h2>
-            <div id="grid-layout-container">
-                <div class="boxed-image">
-                    <img src="res/arm_onshape.png" class="boxed-img">
-                    <p>CAD Depiction of the ARM</p>
-                </div>
-                <div class="boxed-text" id="right">
-                    <p>
-                        I helped create create a 3D CAD models using Onshape. The arm was designed to be modular and customizable, 
-                        allowing for easy iterations. We created components using both Prusa printers and Bamboo Lab X1 Carbons.
-                    </p>
-                </div>
-            </div>
-
-            <h2>KINEMATICS</h2>
-            <div id="grid-layout-container">
-                <div class="boxed-text" id="left">
-                    <p>
-                        I implemented forward and inverse kinematics in MATLAB using the Denavit-Hartenberg (DH) convention. 
-                        This allowed us to compute the exact positions of the end effector based on joint angles and link lengths.
-                    </p>
-                    <br>
-                    <p>
-                        These calculations served as the foundation for simulation, trajectory planning, and closed-loop control. 
-                        This step was essential for validating workspace and reachability.
-                    </p>
-                </div>
-                <div class="boxed-image">
-                    <img src="res/matlab_kinematics.png" class="boxed-img">
-                    <p>MATLAB Kinematics</p>
-                </div>
-            </div>
-
-            <h2>PID</h2>
-            <div id="grid-layout-container">
-                <div class="boxed-image">
-                    <img src="res/ball_following.png" class="boxed-img">
-                    <p>PID Ball Following in CoppeliaSim</p>
-                </div>
-                <div class="boxed-text" id="right">
-                    <p>
-                        Using the onboard Raspberry Pi (as its brain), I implemented a ball-following 
-                        algorithm to detect colored objects in real time. The system processed video 
-                        frames to extract the position of a target color blob and adjusted movement 
-                        accordingly using a proportional-integral (PI) controller.
-                    </p>
-                    <p>
-                        This algorithm was designed as a precursor to object approach and pickup behavior, 
-                        potentially enabling the robot arm to autonomously locate and interact with specific items.
-                    </p>
-                </div>
-            </div>
-
-            <h2>OPENSAUCE</h2>
-            <div id="grid-layout-container">
-                <div class="boxed-text" id="left">
-                    <p>
-                        Our team had the opportunity to demonstrate the ARM project at OpenSauce 2023
-                         in San Francisco, an event that celebrates maker culture, robotics, and open-source innovation.
-                    </p>
-                    <br>
-                    <p>
-                        We showcased the mechanical design, control system demos, and the modular 
-                        architecture to a large audience. It demsonrated that collaborative open-source development is 
-                        critical to moving the world towards a better place.
-                    </p>
-                </div>
-                <div class="boxed-image">
-                    <img src="res/opensauce.png" class="boxed-img">
-                    <p>OpenSauce 2023 Convention</p>
-                </div>
-            </div>
-
-            <h2>DEMO</h2>
-            <p class="main-font">The ARM in demonstration at OpenSauce (color following):</p>
-            <video controls width="80%" class="project-video" >
-                <source src="res/demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-        </main>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            const navBar = document.querySelector('.nav-bar');
-            navBar.classList.toggle('active');
-        }
-    </script>
+  <div class="site-shell">
+    <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-logo" href="index.html"><img src="res/site/logo.png" alt="Sam Leveau logo" width="360" height="360"></a>
+      <ul><li><a href="index.html">HOME</a></li><li><a href="work.html" aria-current="page">WORK</a></li><li><a href="CV.html">CV</a></li></ul>
+      <p class="nav-credit">Designed by <strong>Sam Leveau</strong> &copy;<span class="nav-edit">Last Updated: June 12, 2026</span></p>
+    </nav>
+    <main class="site-content">
+      <div class="page">
+        <header class="project-header">
+          <div><p class="eyebrow">Robotics / Team Leadership</p><h1>ARM Team</h1><p class="page-intro">A low-cost, open-source, modular robotic arm developed within UC Santa Cruz's Slugbotics club.</p></div>
+          <div class="status-group"><span class="status status-completed">Completed</span><span class="status status-date">September 2023 - June 2025</span></div>
+        </header>
+        <section class="project-section">
+          <div class="project-media"><img src="res/projects/arm/cad-model.png" alt="CAD model of the modular robotic arm in Onshape" width="1132" height="1162" loading="lazy"><p class="caption">CAD depiction of the ARM</p></div>
+          <div class="project-copy"><h2>Mechanical Design</h2><p>As a co-lead, I helped guide the technical and organizational direction of the project. I contributed to 3D CAD models in Onshape and helped design the arm to be modular, customizable, and easy to iterate.</p><p>Components were manufactured using Prusa printers and Bambu Lab X1 Carbon printers. I also introduced a shared bill of materials and a Notion workspace for communication, tasks, and documentation.</p></div>
+        </section>
+        <section class="project-section reverse">
+          <div class="project-media"><img src="res/projects/arm/matlab-kinematics.png" alt="MATLAB visualization of robotic arm kinematics" width="1528" height="1326" loading="lazy"><p class="caption">MATLAB kinematics</p></div>
+          <div class="project-copy"><h2>Kinematics</h2><p>I implemented forward and inverse kinematics in MATLAB using the Denavit-Hartenberg convention. This allowed the team to calculate end-effector positions from joint angles and link lengths.</p><p>These calculations provided a foundation for simulation, trajectory planning, closed-loop control, and workspace validation.</p></div>
+        </section>
+        <section class="project-section">
+          <div class="project-media"><img src="res/projects/arm/ball-following.png" alt="Ball-following control demonstration in CoppeliaSim" width="1762" height="1412" loading="lazy"><p class="caption">PI ball following in CoppeliaSim</p></div>
+          <div class="project-copy"><h2>Vision and Control</h2><p>Using the onboard Raspberry Pi, I implemented a ball-following algorithm that detected colored objects in real time. The system extracted a target blob's image position and adjusted movement with a proportional-integral controller.</p><p>The work was a precursor to autonomous object approach and pickup behaviors.</p></div>
+        </section>
+        <section class="project-section reverse">
+          <div class="project-media"><video class="project-video project-video-portrait" controls preload="metadata" playsinline muted><source src="res/projects/arm/opensauce-2024-demo-muted.mp4" type="video/mp4">Your browser does not support embedded video.</video><p class="caption">ARM demonstration at OpenSauce 2024</p></div>
+          <div class="project-copy"><h2>OpenSauce 2024</h2><p>The team demonstrated the ARM project at OpenSauce 2024 in San Francisco. We presented its mechanical design, control system, and modular architecture to a large maker and robotics audience.</p></div>
+        </section>
+        <footer class="site-footer">
+          <p class="footer-email">samleveau14@gmail.com</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.linkedin.com/in/sam-leveau-2a243125a/" target="_blank" rel="noopener noreferrer" aria-label="Sam Leveau on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 10h4v11H3V10Zm6.5 0h3.83v1.5h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-4.8c0-1.15-.02-2.63-1.6-2.63-1.61 0-1.86 1.26-1.86 2.55V21h-4V10Z"/></svg></a>
+            <a class="social-link" href="https://github.com/samuroo" target="_blank" rel="noopener noreferrer" aria-label="Sam Leveau on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7A11.5 11.5 0 0 0 8.36 23.1c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.26c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg></a>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+  <script>function toggleMenu(){const n=document.querySelector('.site-nav');const b=document.querySelector('.menu-button');n.classList.toggle('active');b.setAttribute('aria-expanded',n.classList.contains('active'));}</script>
 </body>
 </html>

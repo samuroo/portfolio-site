@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EMBER, an autonomous indoor emergency-surveillance quadcopter project using global path planning and Model Predictive Control.">
+  <title>EMBER | Sam Leveau</title>
+  <link rel="icon" href="res/site/favicon.ico">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+  <div class="site-shell">
+    <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-logo" href="index.html"><img src="res/site/logo.png" alt="Sam Leveau logo" width="360" height="360"></a>
+      <ul><li><a href="index.html">HOME</a></li><li><a href="work.html" aria-current="page">WORK</a></li><li><a href="CV.html">CV</a></li></ul>
+      <p class="nav-credit">Designed by <strong>Sam Leveau</strong> &copy;<span class="nav-edit">Last Updated: June 12, 2026</span></p>
+    </nav>
+
+    <main class="site-content">
+      <div class="page">
+        <header class="project-header">
+          <div>
+            <p class="eyebrow">Autonomous Flight / Motion Planning</p>
+            <h1>EMBER</h1>
+            <p class="page-intro">Emergency Building Entry Robot: an autonomous indoor quadcopter concept for safer fire surveillance.</p>
+          </div>
+          <div class="status-group">
+            <span class="status status-completed">Completed</span>
+            <span class="status status-date">November 2025 - January 2026</span>
+            <span class="status status-class">Class Project</span>
+          </div>
+        </header>
+
+        <div class="project-links">
+          <a class="project-link" href="res/documents/ember-report.pdf" target="_blank" rel="noopener">EMBER Project Report</a>
+        </div>
+
+        <section class="project-section">
+          <div class="project-media">
+            <img src="res/projects/ember/floorplan.png" alt="Simulated office floor plan with the EMBER quadcopter route shown in red" width="420" height="399">
+            <p class="caption">The office floor-plan simulation environment and planned route.</p>
+          </div>
+          <div class="project-copy">
+            <h2>Overview</h2>
+            <p>Traditional fire surveillance can require firefighters to enter burning or structurally unstable buildings to locate victims and assess how a fire is spreading. This places people at significant risk and can make gathering critical information slow.</p>
+            <p>EMBER, the <strong>Emergency Building Entry Robot</strong>, was a team project exploring how an autonomous quadcopter could navigate through a known indoor environment toward a target location. The system combined sampling-based global path planners with a local Model Predictive Controller to generate and track collision-free routes in simulation.</p>
+            <p>The team compared RRT, RRT*, RRT-Connect, and BIT* global planners using a Crazyflie 2.0 model in PyBullet. I implemented the local MPC solver, which tracked the planned route over a finite prediction horizon while accounting for the quadcopter's dynamics and operating constraints.</p>
+          </div>
+        </section>
+
+        <section class="project-section reverse">
+          <div class="project-media">
+            <video class="project-video" controls muted playsinline preload="metadata" width="1280" height="956" aria-label="EMBER quadcopter Model Predictive Control simulation">
+              <source src="res/projects/ember/ember-demo-muted.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <p class="caption">EMBER tracking a planned indoor route using Model Predictive Control.</p>
+          </div>
+          <div class="project-copy">
+            <h2>Simulation Demo</h2>
+            <p>This demonstration shows the MPC running in simulation as the quadcopter follows a route through the indoor environment. The green line represents the drone's executed trajectory, while the red points show the controller's finite prediction horizon.</p>
+            <p>The MPC repeatedly calculates a local control sequence, applies its first input, and then solves the optimization again using the updated state. This allows the quadcopter to continually correct its motion while following the global path.</p>
+            <p><strong>Visual notice:</strong> The simulation recording contains brief flashing artifacts.</p>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p class="footer-email">samleveau14@gmail.com</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.linkedin.com/in/sam-leveau-2a243125a/" target="_blank" rel="noopener noreferrer" aria-label="Sam Leveau on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 10h4v11H3V10Zm6.5 0h3.83v1.5h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-4.8c0-1.15-.02-2.63-1.6-2.63-1.61 0-1.86 1.26-1.86 2.55V21h-4V10Z"/></svg></a>
+            <a class="social-link" href="https://github.com/samuroo" target="_blank" rel="noopener noreferrer" aria-label="Sam Leveau on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7A11.5 11.5 0 0 0 8.36 23.1c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.26c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg></a>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+  <script>function toggleMenu(){const n=document.querySelector('.site-nav');const b=document.querySelector('.menu-button');n.classList.toggle('active');b.setAttribute('aria-expanded',n.classList.contains('active'));}</script>
+</body>
+</html>

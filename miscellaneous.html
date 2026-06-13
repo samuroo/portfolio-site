@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A collection of smaller engineering and creative projects by Sam Leveau.">
+  <title>Miscellaneous Projects | Sam Leveau</title>
+  <link rel="icon" href="res/site/favicon.ico">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+  <div class="site-shell">
+    <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-logo" href="index.html"><img src="res/site/logo.png" alt="Sam Leveau logo" width="360" height="360"></a>
+      <ul><li><a href="index.html">HOME</a></li><li><a href="work.html" aria-current="page">WORK</a></li><li><a href="CV.html">CV</a></li></ul>
+      <p class="nav-credit">Designed by <strong>Sam Leveau</strong> &copy;<span class="nav-edit">Last Updated: June 12, 2026</span></p>
+    </nav>
+    <main class="site-content"><div class="page">
+      <header class="project-header">
+        <div><p class="eyebrow">Engineering / Art / Fabrication</p><h1>Miscellaneous Projects</h1><p class="page-intro">A selection of smaller professional, technical, and creative projects that do not need full standalone pages.</p></div>
+        <span class="status status-completed">Collection</span>
+      </header>
+
+      <section class="project-section">
+        <div class="project-media"><img src="res/projects/miscellaneous/trackdrone.jpeg" alt="TrackDrone rail-mounted autonomous greenhouse research platform" width="905" height="1600"><p class="caption">TrackDrone greenhouse research platform</p></div>
+        <div class="project-copy"><h2>TrackDrone</h2><p>I worked alongside an environmental studies professor and an electrical engineering student to conduct customer discovery and develop a greenhouse observation system. The platform carried a specialized camera provided to the research lab and was designed to travel autonomously along a rail spanning the greenhouse.</p><p>I focused on the finite-state machine and the system's main autonomous logic, using an Arduino Uno and simple ultrasonic distance sensors to control its movement. In the image, the custom rail mount had not yet been finalized.</p></div>
+      </section>
+      <section class="project-section project-section-continuation reverse">
+        <div class="project-media"><video class="project-video project-video-portrait" controls preload="metadata" playsinline muted><source src="res/projects/miscellaneous/trackdrone-demo-muted.mp4" type="video/mp4">Your browser does not support embedded video.</video><p class="caption">TrackDrone working demonstration</p></div>
+        <div class="project-copy"><h2>TrackDrone Demo</h2><p>This simple demonstration shows TrackDrone beginning an autonomous run along the rail. The platform was designed to travel back and forth across the full length of the greenhouse while carrying the specialized research camera.</p></div>
+      </section>
+
+      <section class="project-section">
+        <div class="project-media"><img src="res/projects/miscellaneous/sand-art.jpeg" alt="Interactive sand art patterns created through vibration" width="1200" height="1600" loading="lazy"><p class="caption">Wave Finder sand patterns</p></div>
+        <div class="project-copy"><h2>Sand Art: Wave Finder</h2><p>Wave Finder was an interactive art piece created for a one-day gallery hosted by Fruitcake, a UC Santa Cruz art club. Inspired by guitar and visual art, it used a six-inch, 8-ohm speaker, a quarter-inch acrylic sheet, a mono guitar output jack, an aluminum plate, and finely sifted beach sand.</p><p>A guitar signal drove the speaker and vibrated the plate. At particular resonant frequencies, the sand gathered into visible geometric patterns, allowing visitors to explore the relationship between sound and physical form.</p></div>
+      </section>
+      <section class="project-section project-section-continuation reverse">
+        <div class="project-media"><video class="project-video project-video-portrait" controls preload="metadata" playsinline muted poster="res/projects/miscellaneous/sand-art.jpeg"><source src="res/projects/miscellaneous/sand-art-demo-muted.mp4" type="video/mp4">Your browser does not support embedded video.</video><p class="caption">Wave Finder in operation</p></div>
+        <div class="project-copy"><h2>Sand Art Demo</h2><p>In this demonstration, a guitarist reaches one of the plate's resonant frequencies and a simple pattern emerges as the vibrating sand moves into shape.</p></div>
+      </section>
+
+      <section class="project-section">
+        <div class="project-media"><img src="res/projects/miscellaneous/mellotron.jpeg" alt="Open Mellotron showing its internal mechanism and electronics" width="1200" height="1600" loading="lazy"><p class="caption">Mellotron mechanism and electronics</p></div>
+        <div class="project-copy"><h2>Mellotron</h2><p>I was asked to help implement a state machine for controlling a custom Mellotron project, contributing my experience with embedded control logic and system behavior.</p><p>Over the course of one day, we developed a working control system capable of coordinating the instrument's many complex mechanical movements.</p></div>
+      </section>
+
+      <section class="project-section reverse">
+        <div class="project-media"><img src="res/projects/miscellaneous/skull-mask.jpeg" alt="Hand-finished sculpted skull mask" width="1200" height="1600" loading="lazy"><p class="caption">Skull mask fabrication</p></div>
+        <div class="project-copy"><h2>Skull Mask</h2><p>I 3D printed this skull mask, sanded the surface to remove the print texture, and painted it by hand.</p></div>
+      </section>
+
+      <section class="project-section">
+        <div class="project-media"><div class="image-placeholder">Additional projects</div></div>
+        <div class="project-copy"><h2>And More</h2><p>I have completed many other mini projects across robotics, electronics, fabrication, and art. Some were quick experiments or practical builds and were never formally documented.</p></div>
+      </section>
+
+      <footer class="site-footer"><p class="footer-email">samleveau14@gmail.com</p><div class="social-links">
+        <a class="social-link" href="https://www.linkedin.com/in/sam-leveau-2a243125a/" target="_blank" rel="noopener noreferrer" aria-label="Sam Leveau on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 10h4v11H3V10Zm6.5 0h3.83v1.5h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-4.8c0-1.15-.02-2.63-1.6-2.63-1.61 0-1.86 1.26-1.86 2.55V21h-4V10Z"/></svg></a>
+        <a class="social-link" href="https://github.com/samuroo" target="_blank" rel="noopener noreferrer" aria-label="Sam Leveau on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7A11.5 11.5 0 0 0 8.36 23.1c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.26c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg></a>
+      </div></footer>
+    </div></main>
+  </div>
+  <script>function toggleMenu(){const n=document.querySelector('.site-nav');const b=document.querySelector('.menu-button');n.classList.toggle('active');b.setAttribute('aria-expanded',n.classList.contains('active'));}</script>
+</body>
+</html>

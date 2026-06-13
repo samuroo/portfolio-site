@@ -1,0 +1,122 @@
+.project-header {
+    align-items: end;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.project-header .status {
+    flex: 0 0 auto;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: -1.5rem 0 3rem;
+}
+
+.project-link {
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.55rem 0.9rem;
+    text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+    background: var(--accent);
+    color: #fff;
+}
+
+.project-section {
+    align-items: center;
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 3rem 0;
+}
+
+.project-section-continuation {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.project-media,
+.project-copy {
+    width: 100%;
+}
+
+.project-section.reverse .project-media {
+    order: 2;
+}
+
+.project-copy h2 {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.project-copy p + p {
+    margin-top: 1rem;
+}
+
+.project-media img {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.project-media-logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 360px;
+}
+
+.project-video {
+    background: #000;
+    border-radius: 10px;
+    display: block;
+    max-height: 70vh;
+    width: 100%;
+}
+
+.project-video-portrait {
+    margin: 0 auto;
+    max-width: 430px;
+}
+
+.caption {
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.document-link {
+    border-bottom: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+@media (max-width: 760px) {
+    .project-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-section {
+        grid-template-columns: 1fr;
+    }
+
+    .project-section.reverse .project-media {
+        order: initial;
+    }
+}
