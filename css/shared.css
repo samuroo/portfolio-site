@@ -296,3 +296,41 @@ h1 {
         gap: 0.5rem;
     }
 }
+
+/* Next-project floating button */
+.project-nav-container {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.next-project-button,
+.prev-project-button {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+@media (max-width: 800px) {
+    .project-nav-container {
+        /* move to bottom-right on small screens and stack buttons vertically (Next above Previous) */
+        top: auto;
+        bottom: 1.25rem;
+        right: 1rem;
+        flex-direction: column;
+        gap: 0.4rem;
+        align-items: flex-end;
+    }
+}
+

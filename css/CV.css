@@ -9,3 +9,6 @@
 .cv-fallback {
     margin-bottom: 1rem;
 }
+
+/* CV header uses standard .page-header and .project-links for actions */
+
